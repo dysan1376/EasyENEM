@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Easy ENEM</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
+	<style type="text/css">
+	.ui-icon-myicon:after {
+	    background-image: url("../img/logo.png");
+	    /* Make your icon fit */
+	    background-size: 20px 20px;
+	}
+	</style>
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="header" data-position="fixed">
+		<h1>Biologia</h1>
+		<a href="simulados.html" data-icon="back">Atras</a>
+		<a href="menu.html" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-myicon">Home</a>
+	</div>
+	<div data-role="content">
+		<p>A cor dos olhos é determinada pelo menos por três pares de genes de efeito aditivo. Um homen homozigoto dominante para todos os pares ligados a essa catracterística teve um filho com uma mulher homozigota recessiva, também para todos os pares. A probabilidade desse descendente ter olhos azius é</p>
+		<div data-role="fieldcontain">
+		    <fieldset data-role="controlgroup">
+		    	<form id="myForm">
+		         	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" />
+		         	<label for="radio-choice-1">75%</label>
+
+		         	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+		         	<label for="radio-choice-2">100%</label>
+
+		         	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+		         	<label for="radio-choice-3">50%</label>
+
+		         	<input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4"  />
+		         	<label for="radio-choice-4">25%</label>
+
+		         	<input type="radio" name="radio-choice-1" id="radio-choice-5" value="choice-5"  />
+		         	<label for="radio-choice-5">0%</label>
+		         </form>
+		    </fieldset>
+		</div>
+		<a href="links.html" data-role="button" data-inline="true"><img src="../img/question.png"></a>
+		<a href="#" id="answer" data-role="button" data-inline="true">Responder</a>
+		<a href="chat.html" data-rel="dialog" data-transition="flip" data-role="button" data-inline="true"><img src="../img/chat.png"></a>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h2></h2>
+	</div>
+	<script type="text/javascript">
+		$('#answer').click(function() {
+			if ($("input:radio:checked").val() == "choice-5" ) {
+				window.location.href = "correto.html";
+			} else {
+				window.location.href = "incorreto.html";
+			}
+		});
+	</script>
+</body>
+</html>
